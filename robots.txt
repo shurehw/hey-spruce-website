@@ -1,5 +1,5 @@
-# Robots.txt for Hey Spruce Restaurant Cleaning Services
-# https://www.heyspruce.com/
+# Robots.txt for GroundOps Restaurant Cleaning Services
+# https://www.groundops.com/
 
 # Allow all crawlers
 User-agent: *
@@ -7,6 +7,9 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /tmp/
+Disallow: /supplier-portal.html
+Disallow: /performance-optimized.html
+Disallow: /seo-fixes.html
 Crawl-delay: 0
 
 # Specific crawler rules
@@ -40,7 +43,7 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://www.heyspruce.com/sitemap.xml
+Sitemap: https://www.groundops.com/sitemap.xml
 
 # Cache control
 # Cache-Control: public, max-age=3600

@@ -204,7 +204,7 @@ function generateContractHTML(formData) {
     return `
         <div style="font-family: Georgia, serif; line-height: 1.8; color: #333;">
             <div style="text-align: center; margin-bottom: 2rem;">
-                <h1 style="color: #5f6b9b; font-size: 2rem;">HEY SPRUCE</h1>
+                <h1 style="color: #5f6b9b; font-size: 2rem;">GROUNDOPS</h1>
                 <h2 style="color: #666; font-size: 1.5rem;">Commercial Cleaning Service Agreement</h2>
             </div>
             
@@ -212,10 +212,10 @@ function generateContractHTML(formData) {
                 <p><strong>This Service Agreement</strong> ("Agreement") is entered into as of ${new Date().toLocaleDateString()} between:</p>
                 
                 <p style="margin: 1rem 0;">
-                    <strong>Service Provider:</strong> Hey Spruce LLC<br>
+                    <strong>Service Provider:</strong> GroundOps LLC<br>
                     1972 E 20th St, Los Angeles, CA 90058<br>
                     Phone: 877-253-2646<br>
-                    Email: info@heyspruce.com
+                    Email: info@groundops.com
                 </p>
                 
                 <p style="margin: 1rem 0;">
@@ -229,7 +229,7 @@ function generateContractHTML(formData) {
             
             <div style="margin-bottom: 2rem;">
                 <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">1. SCOPE OF SERVICES</h3>
-                <p>Hey Spruce agrees to provide the following cleaning services:</p>
+                <p>GroundOps agrees to provide the following cleaning services:</p>
                 <ul style="margin: 1rem 0;">${servicesList}</ul>
                 <p><strong>Frequency:</strong> ${frequency.charAt(0).toUpperCase() + frequency.slice(1)}</p>
                 <p><strong>Start Date:</strong> ${startDate}</p>
@@ -247,7 +247,7 @@ function generateContractHTML(formData) {
                 <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">3. TERMS & CONDITIONS</h3>
                 <ul style="margin: 1rem 0;">
                     <li>Service will be performed by trained and insured cleaning professionals</li>
-                    <li>All cleaning supplies and equipment provided by Hey Spruce</li>
+                    <li>All cleaning supplies and equipment provided by GroundOps</li>
                     <li>Services comply with LA County Health Department regulations</li>
                     <li>24/7 emergency service available upon request</li>
                     <li>Client must provide access to service areas during scheduled times</li>
@@ -258,14 +258,14 @@ function generateContractHTML(formData) {
             ${formData.get('insurance') ? `
             <div style="margin-bottom: 2rem;">
                 <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">4. INSURANCE & LIABILITY</h3>
-                <p>Hey Spruce maintains comprehensive general liability insurance of $2,000,000 and workers' compensation coverage for all employees. Certificates of insurance available upon request.</p>
+                <p>GroundOps maintains comprehensive general liability insurance of $2,000,000 and workers' compensation coverage for all employees. Certificates of insurance available upon request.</p>
             </div>
             ` : ''}
             
             ${formData.get('healthCompliance') ? `
             <div style="margin-bottom: 2rem;">
                 <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">5. HEALTH CODE COMPLIANCE GUARANTEE</h3>
-                <p>Hey Spruce guarantees all services meet or exceed Los Angeles County Health Department standards. We provide documentation and support for all health inspections.</p>
+                <p>GroundOps guarantees all services meet or exceed Los Angeles County Health Department standards. We provide documentation and support for all health inspections.</p>
             </div>
             ` : ''}
             
@@ -277,9 +277,9 @@ function generateContractHTML(formData) {
                         <p>${contactPerson}<br>${businessName}<br>Date: _____________</p>
                     </div>
                     <div style="width: 45%;">
-                        <p><strong>HEY SPRUCE REPRESENTATIVE</strong></p>
+                        <p><strong>GROUNDOPS REPRESENTATIVE</strong></p>
                         <div style="border-bottom: 1px solid #333; margin: 2rem 0;"></div>
-                        <p>Authorized Signature<br>Hey Spruce LLC<br>Date: _____________</p>
+                        <p>Authorized Signature<br>GroundOps LLC<br>Date: _____________</p>
                     </div>
                 </div>
             </div>
@@ -460,4 +460,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Initialize
-console.log('Hey Spruce Supplier Portal loaded successfully!');
+console.log('GroundOps Supplier Portal loaded successfully!');

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFPA 96 Documentation Workflow | Certificates + Evidence | GroundOps</title>
+  <meta name="description" content="NFPA 96 documentation workflow for restaurants: certificate tracking, evidence requirements, exception handling, and inspection-ready records.">
+  <meta name="keywords" content="NFPA 96 documentation, hood cleaning certificate, inspection readiness, compliance records, exception log">
+  <link rel="canonical" href="https://www.groundops.com/blog/nfpa-96-documentation-workflow">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="/blog">← Back to GroundOps Ops Guides</a>
+      </div>
+    </nav>
+  </header>
+
+  <article class="blog-post">
+    <div class="container">
+      <h1>NFPA 96 documentation workflow: certificates, evidence, and inspection-ready records</h1>
+
+      <p class="lead">NFPA 96 compliance fails operationally when documentation is missing, inconsistent, or not retrievable. The fix is a workflow: schedule → perform work → capture evidence → store certificates → log exceptions → verify closure.</p>
+
+      <h2>What ops needs to be able to prove</h2>
+      <ul>
+        <li>Which locations were serviced, when, and by whom</li>
+        <li>What scope was performed (hood/duct/fan as applicable)</li>
+        <li>Where the certificate lives and how to retrieve it fast</li>
+        <li>What exceptions occurred and how they were closed</li>
+      </ul>
+
+      <h2>Example artifact: certificate tracking table (redacted)</h2>
+      <div class="table-wrapper" role="region" aria-label="Certificate tracking table">
+        <table class="comparison-table" role="table">
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Service date</th>
+              <th>Certificate status</th>
+              <th>Stored link</th>
+              <th>Exceptions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Location A</td>
+              <td>—</td>
+              <td>Received</td>
+              <td>Location record → Documents</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Location B</td>
+              <td>—</td>
+              <td>Missing</td>
+              <td>—</td>
+              <td>1 (logged)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Exception handling: missing docs are a work order</h2>
+      <p>If a certificate is missing, that’s not “admin.” It’s an open exception with an owner and due date. Closure requires the document linked to the location record.</p>
+
+      <div class="table-wrapper" role="region" aria-label="Documentation exception log excerpt">
+        <table class="comparison-table" role="table">
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Exception</th>
+              <th>Owner</th>
+              <th>Closure evidence</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Location B</td>
+              <td>Missing NFPA certificate for last service</td>
+              <td>Vendor</td>
+              <td>Certificate uploaded + linked</td>
+              <td>Open</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>This is the same pattern used in <a href="/platform">the platform</a> and <a href="/vendor-management">vendor management</a>, and it shows up in the inspection readiness case study: <a href="/case-studies/full-service-restaurant-group-inspection-readiness">full-service group inspection readiness</a>.</p>
+
+      <p>Where this matters operationally: <a href="/hood-exhaust-cleaning">hood / exhaust coordination</a> and documentation packaging.</p>
+
+      <section class="cta-section">
+        <h2>Get an ops walkthrough</h2>
+        <p>We’ll show how certificates, evidence, and exceptions are stored and retrieved by location.</p>
+        <div class="cta-buttons">
+          <a href="/platform" class="btn btn-primary">See the platform</a>
+          <a href="tel:3235551234" class="btn btn-secondary">Call (323) 555-1234</a>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 GroundOps. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

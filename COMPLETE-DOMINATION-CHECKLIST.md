@@ -114,12 +114,12 @@ Use CallRail or CallTrackingMetrics for different numbers
 ### 4. 📱 **SOCIAL MEDIA PRESENCE**
 
 **Create Accounts TODAY:**
-- Instagram: @heysprucela
-- Facebook: /heysprucecleaning
-- LinkedIn: /company/hey-spruce
-- TikTok: @heysprucela
-- YouTube: Hey Spruce Cleaning
-- Twitter/X: @heysprucela
+- Instagram: @groundopsla
+- Facebook: /groundopscleaning
+- LinkedIn: /company/groundops
+- TikTok: @groundopsla
+- YouTube: GroundOps Cleaning
+- Twitter/X: @groundopsla
 - Nextdoor: Business page
 
 **Posting Schedule:**
@@ -146,7 +146,7 @@ Use CallRail or CallTrackingMetrics for different numbers
 ```
 Budget: $50-100/day minimum
 Campaigns:
-1. Brand Protection - "Hey Spruce"
+1. Brand Protection - "GroundOps"
 2. Competitor Conquesting - "[Competitor] Alternative"
 3. Emergency Services - "Emergency restaurant cleaning"
 4. Location-based - "Restaurant cleaning [neighborhood]"

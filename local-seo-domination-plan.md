@@ -1,4 +1,4 @@
-# 🎯 LOCAL GEO-SEO DOMINATION STRATEGY FOR HEY SPRUCE
+# 🎯 LOCAL GEO-SEO DOMINATION STRATEGY FOR GROUNDOPS
 
 ## 📍 CURRENT GEO-SEO STATUS
 - Basic local schema ✅
@@ -14,10 +14,10 @@
 #### Immediate Actions:
 1. **Claim & Verify GMB Listing**
    - Go to: https://business.google.com
-   - Use exact NAP: Hey Spruce Restaurant Cleaning
+   - Use exact NAP: GroundOps Restaurant Cleaning
    - Address: [Your actual business address]
    - Phone: (323) 555-1234
-   - Website: https://www.heyspruce.com
+   - Website: https://www.groundops.com
 
 2. **Optimize GMB Profile (100% Completion)**
    - Primary Category: "Commercial Cleaning Service"
@@ -27,7 +27,7 @@
      - "House Cleaning Service"
    - Business Description (750 chars):
      ```
-     Hey Spruce provides professional restaurant cleaning services throughout Los Angeles County. Specializing in commercial kitchen deep cleaning, exhaust hood cleaning, and health code compliance. Our team includes former LA County health inspectors ensuring 100% inspection pass rates. Services include 24/7 emergency cleaning, NFPA 96 hood cleaning, floor degreasing, equipment sanitization, and complete kitchen maintenance. Serving Downtown LA, Hollywood, Beverly Hills, Santa Monica, Pasadena, and all LA County. Licensed, insured, BBB A+ rated. Same-day service available. Call for free quote.
+     GroundOps provides professional restaurant cleaning services throughout Los Angeles County. Specializing in commercial kitchen deep cleaning, exhaust hood cleaning, and health code compliance. Our team includes former LA County health inspectors ensuring 100% inspection pass rates. Services include 24/7 emergency cleaning, NFPA 96 hood cleaning, floor degreasing, equipment sanitization, and complete kitchen maintenance. Serving Downtown LA, Hollywood, Beverly Hills, Santa Monica, Pasadena, and all LA County. Licensed, insured, BBB A+ rated. Same-day service available. Call for free quote.
      ```
 
 3. **Service Areas (Add ALL)**
@@ -165,11 +165,11 @@
 
 **NAP Format (Use EXACTLY):**
 ```
-Hey Spruce Restaurant Cleaning Services
+GroundOps Restaurant Cleaning Services
 [Your Address]
 Los Angeles, CA [ZIP]
 (323) 555-1234
-https://www.heyspruce.com
+https://www.groundops.com
 ```
 
 ### 3. NEIGHBORHOOD-SPECIFIC LANDING PAGES
@@ -201,7 +201,7 @@ Each page must have:
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Hey Spruce Restaurant Cleaning Services",
+  "name": "GroundOps Restaurant Cleaning Services",
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 34.0522,
@@ -417,4 +417,4 @@ Each page must have:
 4. **Response Time** - Answer GMB messages <1 hour
 5. **Mobile Experience** - 50% of local searches are mobile
 
-This comprehensive geo-SEO strategy will ensure Hey Spruce dominates local search results and the Google Maps pack for all restaurant cleaning searches in Los Angeles!
+This comprehensive geo-SEO strategy will ensure GroundOps dominates local search results and the Google Maps pack for all restaurant cleaning searches in Los Angeles!

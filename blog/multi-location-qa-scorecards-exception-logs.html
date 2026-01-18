@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Location QA Scorecards + Exception Logs | GroundOps</title>
+  <meta name="description" content="How to scale QA across multi-location restaurant ops using checklists, photo evidence, exception logs, and monthly scorecards.">
+  <meta name="keywords" content="multi-location QA, restaurant QA checklist, exception log, operations scorecard, facilities execution">
+  <link rel="canonical" href="https://www.groundops.com/blog/multi-location-qa-scorecards-exception-logs">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="/blog">← Back to GroundOps Ops Guides</a>
+      </div>
+    </nav>
+  </header>
+
+  <article class="blog-post">
+    <div class="container">
+      <h1>Multi-location QA that scales: checklists, photo evidence, exception logs, and scorecards</h1>
+
+      <p class="lead">If QA lives in texts, emails, and “looks good” drive-bys, it won’t scale. Multi-location ops need a single system that turns every visit into documented outputs, and every miss into a tracked exception with ownership and closure.</p>
+
+      <h2>The minimum viable QA loop</h2>
+      <ul>
+        <li><strong>Checklist</strong>: define the standard and confirm completion (per location, per scope).</li>
+        <li><strong>Photo evidence</strong>: prove completion for the items that matter.</li>
+        <li><strong>Exception log</strong>: capture misses as corrective actions (owner + due date).</li>
+        <li><strong>Scorecards</strong>: roll up performance by location and vendor so ops can spot repeat issues.</li>
+      </ul>
+
+      <h2>Exception logs: turning misses into owned actions</h2>
+      <p>Exceptions are not “notes.” They are work. The rule is simple: if it matters enough to mention, it matters enough to assign, due-date, and close with evidence.</p>
+      <ul>
+        <li><strong>Write the exception like a ticket</strong>: what, where, and the constraint (access, equipment not movable, missing parts).</li>
+        <li><strong>Assign an owner</strong>: vendor, ops, maintenance, or manager.</li>
+        <li><strong>Set a due date</strong>: even if it’s a placeholder pending parts—no due date means no priority.</li>
+        <li><strong>Define closure evidence</strong>: what proof is required to mark it closed (photos, re-checklist, certificate).</li>
+        <li><strong>Mark repeats explicitly</strong>: repeated exceptions are a leadership signal, not a cleaning task.</li>
+      </ul>
+
+      <h2>Monthly scorecards: what leadership actually reviews</h2>
+      <p>Leadership doesn’t review 1,000 photos. They review a scorecard that shows whether execution is happening and where the system is failing. If you can’t roll QA up to a few ops metrics, it won’t stay funded.</p>
+      <ul>
+        <li><strong>Completion %</strong> tells whether scheduled work is closing as planned.</li>
+        <li><strong>Rework %</strong> tells whether “closed” really meant “done.”</li>
+        <li><strong>Repeat exceptions</strong> tells where the same issues recur (location, vendor, or scope problem).</li>
+        <li><strong>Median time-to-close</strong> tells whether issues are being resolved or just logged.</li>
+        <li><strong>SLA adherence</strong> (per agreement) tells whether response/closure targets are being met by priority class.</li>
+      </ul>
+
+      <h2>Example artifact block (redacted)</h2>
+
+      <h3>Monthly scorecard fields</h3>
+      <div class="table-wrapper" role="region" aria-label="Example monthly scorecard fields">
+        <table class="comparison-table" role="table">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>What it tells ops</th>
+              <th>Where it comes from</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Completion %</td>
+              <td>Did scheduled work close on time, per scope?</td>
+              <td>Scheduled vs closed work orders</td>
+            </tr>
+            <tr>
+              <td>Rework %</td>
+              <td>How often did the work need a redo?</td>
+              <td>Re-opened work orders / total</td>
+            </tr>
+            <tr>
+              <td>Repeat exceptions</td>
+              <td>Which misses keep recurring by location/vendor?</td>
+              <td>Exception log grouped by category</td>
+            </tr>
+            <tr>
+              <td>Median time-to-close</td>
+              <td>How fast issues get resolved end-to-end</td>
+              <td>Created → closed timestamps</td>
+            </tr>
+            <tr>
+              <td>SLA adherence (by category)</td>
+              <td>Whether response/closure targets are being met</td>
+              <td>Priority class vs timestamps (per SLA)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Exception log excerpt</h3>
+      <div class="table-wrapper" role="region" aria-label="Exception log excerpt">
+        <table class="comparison-table" role="table">
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Exception</th>
+              <th>Owner</th>
+              <th>Due</th>
+              <th>Closure evidence</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Location A</td>
+              <td>Recurring grease under fryer (access constraint)</td>
+              <td>Vendor</td>
+              <td>—</td>
+              <td>Photo set + checklist re-run</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>Location B</td>
+              <td>Drain area buildup requires pull-out</td>
+              <td>Ops</td>
+              <td>—</td>
+              <td>Work order closed with photos</td>
+              <td>Dispatched</td>
+            </tr>
+            <tr>
+              <td>Location C</td>
+              <td>Missing hood certificate for last service</td>
+              <td>Vendor</td>
+              <td>—</td>
+              <td>Certificate uploaded + record linked</td>
+              <td>Open</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>This is the loop GroundOps runs through <a href="/platform">the platform</a> and <a href="/vendor-management">vendor management</a>: checklists and evidence for every visit, exceptions logged as owned corrective actions, and scorecards leadership can review.</p>
+      <p>See it in practice: <a href="/case-studies/multi-location-fast-casual-ops-standardization">how a fast-casual group standardized ops across 8 locations</a>. If you’re building this across sites, start with <a href="/multi-location-cleaning">multi-location cleaning</a>.</p>
+
+      <section class="cta-section">
+        <h2>Get an ops walkthrough</h2>
+        <p>We’ll show the work order flow, QA evidence requirements, exception log structure, and scorecard format your team can audit.</p>
+        <div class="cta-buttons">
+          <a href="/platform" class="btn btn-primary">See the platform</a>
+          <a href="tel:3235551234" class="btn btn-secondary">Call (323) 555-1234</a>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 GroundOps. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

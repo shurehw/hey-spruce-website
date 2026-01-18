@@ -1,7 +1,7 @@
 {
-  "name": "hey-spruce-website",
+  "name": "groundops-website",
   "version": "1.0.0",
-  "description": "Professional restaurant cleaning services website for Hey Spruce",
+  "description": "Professional restaurant cleaning services website for GroundOps",
   "main": "index.html",
   "scripts": {
     "dev": "python -m http.server 3000",
@@ -12,12 +12,12 @@
     "restaurant-cleaning",
     "commercial-cleaning",
     "los-angeles",
-    "hey-spruce"
+    "groundops"
   ],
-  "author": "Hey Spruce",
+  "author": "GroundOps",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/hey-spruce-website.git"
+    "url": "https://github.com/your-username/groundops-website.git"
   }
 }

@@ -1,4 +1,4 @@
-# 🎯 50 High-Value Backlink Opportunities for Hey Spruce
+# 🎯 50 High-Value Backlink Opportunities for GroundOps
 
 ## Priority Level Guide:
 - 🔴 **CRITICAL** - Do immediately (Domain Authority 70+)
@@ -233,7 +233,7 @@ Subject: Guest Post: "5 Ways LA Restaurants Can Prevent Health Code Violations"
 
 Hi [Name],
 
-I'm [Your Name] from Hey Spruce, where we help 500+ LA restaurants maintain perfect health inspection scores. Our team includes 3 former LA County health inspectors.
+I'm [Your Name] from GroundOps, where we help 500+ LA restaurants maintain perfect health inspection scores. Our team includes 3 former LA County health inspectors.
 
 I'd love to contribute an article to [Publication] sharing our insider knowledge:
 
@@ -270,16 +270,16 @@ We're BBB A+ rated and include former health inspectors on staff.
 Worth a quick call?
 
 [Your Name]
-Hey Spruce
+GroundOps
 ```
 
 ### Template 3: Local Association Membership
 ```
-Subject: Membership Application - Hey Spruce Restaurant Cleaning
+Subject: Membership Application - GroundOps Restaurant Cleaning
 
 Dear [Association],
 
-Hey Spruce would like to join [Association Name] as a vendor member.
+GroundOps would like to join [Association Name] as a vendor member.
 
 About us:
 - Serving 500+ LA restaurants since 2015

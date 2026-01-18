@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Order Audit Trail vs Texts and Spreadsheets | GroundOps</title>
+  <meta name="description" content="What replaces texts and spreadsheets at scale: a work order audit trail ops can trust, with ownership, evidence, exceptions, and closure.">
+  <meta name="keywords" content="work order audit trail, facilities work orders, operations documentation, vendor accountability, exception logs">
+  <link rel="canonical" href="https://www.groundops.com/blog/work-order-audit-trail-vs-texts-spreadsheets">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="/blog">← Back to GroundOps Ops Guides</a>
+      </div>
+    </nav>
+  </header>
+
+  <article class="blog-post">
+    <div class="container">
+      <h1>What replaces texts and spreadsheets: a work order audit trail ops can trust</h1>
+
+      <p class="lead">Texts and spreadsheets work until they don’t—usually right when you need proof: repeat issues, manager turnover, vendor disputes, or inspection risk. A work order audit trail replaces “we think it happened” with ownership, timestamps, evidence, and closure.</p>
+
+      <h2>The minimum viable work order record</h2>
+      <p>If your “system” can’t answer these questions in 30 seconds, it’s not a system:</p>
+      <ul>
+        <li>What was requested, at which location, and by whom?</li>
+        <li>Who owns it right now (vendor/ops/PM), and what’s the due date?</li>
+        <li>What evidence is required to close it?</li>
+        <li>Was it reopened (rework), and why?</li>
+      </ul>
+
+      <h2>Example artifact: work order fields (redacted)</h2>
+      <div class="table-wrapper" role="region" aria-label="Work order fields table">
+        <table class="comparison-table" role="table">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Why ops needs it</th>
+              <th>Failure if missing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Location</td><td>Rollups and accountability by site</td><td>Orphan work, no reporting</td></tr>
+            <tr><td>Work type</td><td>Cleaning vs PM vs repairs routing</td><td>Wrong owner and slow closure</td></tr>
+            <tr><td>Scope</td><td>Defines what “done” means</td><td>Scope drift and disputes</td></tr>
+            <tr><td>Owner</td><td>Who is responsible right now</td><td>“Someone should…” forever</td></tr>
+            <tr><td>Priority class</td><td>Sets response targets (per SLA)</td><td>Everything is “urgent”</td></tr>
+            <tr><td>Due date</td><td>Forcing function for closure</td><td>No urgency, no escalation</td></tr>
+            <tr><td>Evidence required</td><td>Checklist/photos/certificates</td><td>False closure</td></tr>
+            <tr><td>Status + timestamps</td><td>Cycle time and audit trail</td><td>No time-to-close visibility</td></tr>
+            <tr><td>Reopen reason</td><td>Rework tracking</td><td>Repeat issues never surface</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Status lifecycle ops can audit</h2>
+      <p>A simple lifecycle is enough, as long as it’s enforced:</p>
+      <ol>
+        <li><strong>Opened</strong> → intake captured</li>
+        <li><strong>Dispatched</strong> → assigned to vendor/crew</li>
+        <li><strong>In progress</strong> → work underway</li>
+        <li><strong>Pending evidence</strong> → checklist/photos required</li>
+        <li><strong>Closed</strong> → evidence attached and verified</li>
+        <li><strong>Reopened</strong> (if needed) → tracked as rework with reason</li>
+      </ol>
+
+      <p>This is how GroundOps runs facilities execution through <a href="/platform">the platform</a> and <a href="/vendor-management">vendor management</a>. For a proof pattern, see <a href="/case-studies/multi-location-fast-casual-ops-standardization">multi-location ops standardization</a>. For where this gets used nightly, see <a href="/nightly-cleaning">nightly cleaning</a>.</p>
+
+      <section class="cta-section">
+        <h2>Get an ops walkthrough</h2>
+        <p>We’ll show the work order fields, evidence requirements, and how repeat exceptions get tracked and reported.</p>
+        <div class="cta-buttons">
+          <a href="/platform" class="btn btn-primary">See the platform</a>
+          <a href="tel:3235551234" class="btn btn-secondary">Call (323) 555-1234</a>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 GroundOps. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

@@ -1,4 +1,4 @@
-# Hey Spruce Website - Vercel Deployment Guide
+# GroundOps Website - Vercel Deployment Guide
 
 ## 🚀 Quick Deploy to Vercel
 
@@ -58,7 +58,7 @@
 
 1. **Custom Domain Setup:**
    - In Vercel dashboard, go to Project Settings > Domains
-   - Add your custom domain (e.g., heyspruce.com)
+   - Add your custom domain (e.g., groundops.com)
    - Update DNS records as instructed
 
 2. **Environment Variables** (if needed later):

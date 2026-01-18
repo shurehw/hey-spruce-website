@@ -1,8 +1,8 @@
-# Hey Spruce Website Image Setup Guide
+# GroundOps Website Image Setup Guide
 
 ## Required Images List
 
-Based on the original Hey Spruce website, here are the images you need to add to your `images/` folder:
+Based on the original GroundOps website, here are the images you need to add to your `images/` folder:
 
 ### 1. Logo Files (Priority: HIGH)
 - `logo.png` - Main logo for header (recommended: 300x100px, transparent background)
@@ -38,7 +38,7 @@ Create a `gallery/` subfolder with:
 - `before-floor-1.jpg` and `after-floor-1.jpg`
 
 ### 6. Team/About Images (Priority: MEDIUM)
-- `team-cleaning.jpg` - Team in action wearing Hey Spruce uniforms
+- `team-cleaning.jpg` - Team in action wearing GroundOps uniforms
 - `team-photo.jpg` - Professional team photo
 - `owner.jpg` - Owner/founder photo (if comfortable)
 

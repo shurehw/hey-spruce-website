@@ -3,26 +3,26 @@
 ## YOUR BUSINESS INFORMATION (Use EXACTLY This Format):
 
 ```
-Business Name: Hey Spruce Restaurant Cleaning Services
+Business Name: GroundOps Restaurant Cleaning Services
 Address: [Your Street Address]
 City: Los Angeles
 State: CA
 ZIP: [Your ZIP]
 Phone: (323) 555-1234
-Website: https://www.heyspruce.com
-Email: info@heyspruce.com
+Website: https://www.groundops.com
+Email: info@groundops.com
 ```
 
 ## BUSINESS DESCRIPTION (Use for All Directories):
 
 **Short Description (100 words):**
 ```
-Hey Spruce provides professional restaurant cleaning services throughout Los Angeles County. Specializing in commercial kitchen deep cleaning, exhaust hood cleaning, and health code compliance. Our team includes former LA County health inspectors ensuring 100% inspection pass rates. Licensed, insured, BBB A+ rated. 24/7 emergency service available. Call (323) 555-1234 for free quote.
+GroundOps provides professional restaurant cleaning services throughout Los Angeles County. Specializing in commercial kitchen deep cleaning, exhaust hood cleaning, and health code compliance. Our team includes former LA County health inspectors ensuring 100% inspection pass rates. Licensed, insured, BBB A+ rated. 24/7 emergency service available. Call (323) 555-1234 for free quote.
 ```
 
 **Long Description (250 words):**
 ```
-Hey Spruce Restaurant Cleaning Services is Los Angeles's premier commercial kitchen cleaning company, serving over 500 restaurants throughout LA County since 2015. We specialize in comprehensive restaurant cleaning services including kitchen deep cleaning, NFPA 96 compliant exhaust hood cleaning, floor degreasing, equipment sanitization, and complete dining area maintenance.
+GroundOps Restaurant Cleaning Services is Los Angeles's premier commercial kitchen cleaning company, serving over 500 restaurants throughout LA County since 2015. We specialize in comprehensive restaurant cleaning services including kitchen deep cleaning, NFPA 96 compliant exhaust hood cleaning, floor degreasing, equipment sanitization, and complete dining area maintenance.
 
 Our team includes three former Los Angeles County Health Department inspectors who ensure your restaurant not only meets but exceeds all health code requirements. We guarantee you'll pass your health inspection after our service, or we'll re-clean at no charge.
 
@@ -34,7 +34,7 @@ Fully licensed, bonded, and insured with $2M liability coverage. BBB A+ rated. M
 
 Serving all Los Angeles County including Downtown LA, Hollywood, Beverly Hills, Santa Monica, Pasadena, Long Beach, and the San Fernando Valley. 
 
-Contact us today at (323) 555-1234 for a free quote and see why LA's best restaurants trust Hey Spruce for their cleaning needs.
+Contact us today at (323) 555-1234 for a free quote and see why LA's best restaurants trust GroundOps for their cleaning needs.
 ```
 
 ## CATEGORIES TO SELECT:
@@ -182,8 +182,8 @@ Contact us today at (323) 555-1234 for a free quote and see why LA's best restau
 
 | Directory | Status | Date | Username | Password | Listing URL |
 |-----------|--------|------|----------|----------|-------------|
-| Yelp | ✅ Submitted | [Date] | heyspruce | [Pass] | [URL] |
-| Google My Business | ✅ Submitted | [Date] | heyspruce | [Pass] | [URL] |
+| Yelp | ✅ Submitted | [Date] | groundops | [Pass] | [URL] |
+| Google My Business | ✅ Submitted | [Date] | groundops | [Pass] | [URL] |
 | Bing Places | ⏳ Pending | - | - | - | - |
 | Yellow Pages | ⏳ Pending | - | - | - | - |
 | BBB | ⏳ Pending | - | - | - | - |

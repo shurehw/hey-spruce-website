@@ -63,19 +63,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll Progress Indicator & Scroll to Top Button
+const scrollProgress = document.querySelector('.scroll-progress-bar');
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', () => {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+
+    if (scrollProgress) {
+        scrollProgress.style.width = scrollPercent + '%';
+    }
+
+    // Show/hide scroll to top button
+    if (scrollToTopBtn) {
+        if (scrollTop > 500) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+});
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 // Header Scroll Effect
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     } else {
         header.style.boxShadow = '0 1px 2px 0 rgb(0 0 0 / 0.05)';
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -178,11 +210,160 @@ function openBooking(type) {
     }, 1000);
 }
 
+// Quote Calculator Functions
+function openQuoteCalculator() {
+    const modal = document.getElementById('quote-calculator');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeQuoteCalculator() {
+    const modal = document.getElementById('quote-calculator');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+
+    // Reset form
+    document.getElementById('quote-form').reset();
+    document.getElementById('quote-result').style.display = 'none';
+}
+
+function calculateQuote() {
+    const kitchenSize = document.getElementById('kitchen-size').value;
+    const serviceType = document.getElementById('service-type').value;
+    const frequency = document.getElementById('frequency').value;
+
+    if (!kitchenSize || !serviceType || !frequency) {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    // Pricing logic
+    const basePrices = {
+        small: { 'deep-clean': 600, 'hood': 400, 'sanitization': 500, 'emergency': 800 },
+        medium: { 'deep-clean': 1200, 'hood': 700, 'sanitization': 900, 'emergency': 1500 },
+        large: { 'deep-clean': 2200, 'hood': 1200, 'sanitization': 1600, 'emergency': 2800 }
+    };
+
+    const frequencyDiscounts = {
+        'one-time': 1.0,
+        'monthly': 0.85,
+        'biweekly': 0.80,
+        'weekly': 0.75
+    };
+
+    const basePrice = basePrices[kitchenSize][serviceType];
+    const finalPrice = Math.round(basePrice * frequencyDiscounts[frequency]);
+
+    // Display result
+    const resultDiv = document.getElementById('quote-result');
+    const priceEl = document.getElementById('quote-price');
+    const detailsEl = document.getElementById('quote-details');
+
+    priceEl.textContent = '$' + finalPrice.toLocaleString();
+
+    const frequencyText = {
+        'one-time': 'One-time service',
+        'monthly': 'per month',
+        'biweekly': 'bi-weekly',
+        'weekly': 'per week'
+    };
+
+    detailsEl.textContent = `${frequencyText[frequency]} • Includes all equipment and supplies • 100% satisfaction guaranteed`;
+
+    resultDiv.style.display = 'block';
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('quote-calculator');
+    if (e.target === modal) {
+        closeQuoteCalculator();
+    }
+});
+
+// Chat Widget Functions
+function toggleChat() {
+    const chatWindow = document.getElementById('chat-window');
+    const chatBadge = document.querySelector('.chat-badge');
+
+    if (chatWindow.style.display === 'none' || !chatWindow.style.display) {
+        chatWindow.style.display = 'flex';
+        if (chatBadge) chatBadge.style.display = 'none';
+    } else {
+        chatWindow.style.display = 'none';
+    }
+}
+
+function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const message = input.value.trim();
+
+    if (!message) return;
+
+    const chatMessages = document.querySelector('.chat-messages');
+
+    // Add user message
+    const userMsg = document.createElement('div');
+    userMsg.className = 'chat-message user-message';
+    userMsg.innerHTML = `
+        <p>${message}</p>
+        <span class="message-time">Just now</span>
+    `;
+    chatMessages.appendChild(userMsg);
+
+    input.value = '';
+
+    // Simulate bot response
+    setTimeout(() => {
+        const botMsg = document.createElement('div');
+        botMsg.className = 'chat-message bot-message';
+        botMsg.innerHTML = `
+            <p>Thanks for your message! A team member will respond shortly. For immediate assistance, call us at (323) 555-1234.</p>
+            <span class="message-time">Just now</span>
+        `;
+        chatMessages.appendChild(botMsg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 1000);
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function sendQuickReply(type) {
+    const responses = {
+        pricing: 'Our pricing starts at $499/month for small restaurants. Would you like a custom quote for your kitchen?',
+        emergency: 'We offer 24/7 emergency service with 2-hour response time! Call (323) 555-1234 now for immediate assistance.',
+        schedule: 'Great! What day and time works best for you? Our team is available 7 days a week.'
+    };
+
+    const chatMessages = document.querySelector('.chat-messages');
+    const botMsg = document.createElement('div');
+    botMsg.className = 'chat-message bot-message';
+    botMsg.innerHTML = `
+        <p>${responses[type]}</p>
+        <span class="message-time">Just now</span>
+    `;
+    chatMessages.appendChild(botMsg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Allow Enter key to send message
+document.addEventListener('DOMContentLoaded', () => {
+    const chatInput = document.getElementById('chat-input');
+    if (chatInput) {
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    }
+});
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     // Add any initialization code here
-    console.log('Hey Spruce website loaded successfully!');
-    
+    console.log('GroundOps website loaded successfully!');
+
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
@@ -192,4 +373,12 @@ document.addEventListener('DOMContentLoaded', () => {
             el.style.transition = 'none';
         });
     }
+
+    // Auto-show chat widget after 5 seconds
+    setTimeout(() => {
+        const chatBadge = document.querySelector('.chat-badge');
+        if (chatBadge) {
+            chatBadge.style.animation = 'pulse 2s infinite';
+        }
+    }, 5000);
 });

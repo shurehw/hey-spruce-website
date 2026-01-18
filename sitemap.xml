@@ -1,69 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.heyspruce.com/</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.heyspruce.com/images/clean-kitchen.jpg</image:loc>
-      <image:title>Restaurant Cleaning Los Angeles - Commercial Kitchen Cleaning Services</image:title>
-      <image:caption>Professional restaurant cleaning services in Los Angeles by Hey Spruce</image:caption>
-    </image:image>
+    <loc>https://www.groundops.com/blog</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#services</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.groundops.com/boh-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#equipment-cleaning</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.groundops.com/case-studies</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#service-areas</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.groundops.com/commercial-kitchen-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#testimonials</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.groundops.com/deep-kitchen-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#faq</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.groundops.com/restaurant-cleaning-downtown-los-angeles</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#contact</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.groundops.com/floor-scrubbing</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#gallery</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.groundops.com/foh-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#pricing</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.groundops.com/hood-exhaust-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
   <url>
-    <loc>https://www.heyspruce.com/#emergency-cleaning</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.groundops.com/</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/multi-location-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/nightly-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/platform</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/preventive-maintenance</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/restaurant-cleaning-los-angeles</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/restroom-cleaning</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/vendor-management</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/2024-la-county-health-code-changes-restaurants</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/commercial-kitchen-floor-cleaning-best-practices</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/cost-of-restaurant-cleaning-los-angeles</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/emergency-cleaning-failed-inspections</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/how-often-should-la-restaurants-deep-clean</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/inspection-readiness-corrective-action-workflow</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/multi-location-qa-scorecards-exception-logs</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/nfpa-96-documentation-workflow</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/nfpa-96-requirements-la-restaurants</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/preventive-maintenance-scheduling-exceptions</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/restaurant-cleaning-checklist</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/restaurant-equipment-cleaning-checklist</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/restaurant-grease-trap-cleaning-los-angeles</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/seasonal-cleaning-guide-la-restaurants</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/blog/vendor-coordination-failure-modes</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/case-studies/full-service-restaurant-group-inspection-readiness</loc>
+    <lastmod>2026-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.groundops.com/case-studies/multi-location-fast-casual-ops-standardization</loc>
+    <lastmod>2026-01-17</lastmod>
   </url>
 </urlset>
