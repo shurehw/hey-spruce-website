@@ -13,7 +13,8 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Python cache
+# Python scripts and cache
+*.py
 __pycache__/
 *.pyc
 
@@ -24,6 +25,10 @@ __pycache__/
 # Temporary files
 *.tmp
 *.temp
+*.ps1
+
+# Legacy CSS
+styles-legacy.css
 
 # Scraped content
 heyspruce_rendered.html
