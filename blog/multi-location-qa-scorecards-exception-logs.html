@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://www.groundops.com/blog/multi-location-qa-scorecards-exception-logs">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -24,8 +24,8 @@
       <li><a href="/blog">Ops Guides</a></li>
     </ul>
     <div class="nav-actions">
-        <a href="/supplier-portal" class="nav-login">Login</a>
-        <a href="mailto:info@groundops.com" class="nav-contact">Contact</a>
+        <a href="https://heyspruce.com/portal-login" class="nav-login">Login</a>
+        <a href="#request-access" class="nav-contact" onclick="openRequestForm(event)">[ Request Access ]</a>
       </div>
     <button class="mobile-menu-toggle" aria-label="Menu"><span></span><span></span></button>
   </nav>
@@ -208,6 +208,55 @@
   </div>
 </footer>
 
+
+  <!-- Request Access Modal -->
+  <div id="requestModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRequestForm()">&times;</span>
+      <div class="request-form-header">
+        <h2>Request Access</h2>
+        <p>Tell us about your operation. We'll follow up within one business day.</p>
+      </div>
+      <form id="requestForm" onsubmit="submitRequestForm(event)">
+        <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16);">
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Company *</label>
+            <input type="text" name="company" required>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone">
+          </div>
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label>Number of locations</label>
+            <select name="locations">
+              <option value="">Select</option>
+              <option value="1-5">1 - 5</option>
+              <option value="6-20">6 - 20</option>
+              <option value="21-50">21 - 50</option>
+              <option value="50+">50+</option>
+            </select>
+          </div>
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label>What do you need help with?</label>
+            <textarea name="message" rows="3" placeholder="Cleaning, maintenance, vendor management, etc."></textarea>
+          </div>
+        </div>
+        <div style="margin-top: var(--space-24); display: flex; gap: var(--space-16); align-items: center;">
+          <button type="submit" class="btn">Submit</button>
+          <span id="formStatus" class="mono" style="font-size: var(--text-sm); color: var(--color-secondary);"></span>
+        </div>
+      </form>
+    </div>
+  </div>
 <script src="../script.js"></script>
 </body>
 </html>
