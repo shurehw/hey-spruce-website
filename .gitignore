@@ -29,3 +29,4 @@ __pycache__/
 heyspruce_rendered.html
 scrape_spruce.py
 .vercel
+.env*.local

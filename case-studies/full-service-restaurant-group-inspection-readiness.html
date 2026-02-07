@@ -6,215 +6,184 @@
   <title>Case Study: Inspection Readiness Workflow | GroundOps</title>
   <meta name="description" content="How a full-service restaurant group established inspection readiness across 5 locations using corrective actions, QA evidence, exception logs, and monthly scorecards.">
   <link rel="canonical" href="https://www.groundops.com/case-studies/full-service-restaurant-group-inspection-readiness">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
 
-  <header class="header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-wrapper">
-          <div class="logo">
-            <a href="/../index"><span style="color: #14b8a6; font-weight: 700;">Ground</span><span style="color: #0f172a; font-weight: 500;">Ops</span></a>
-          </div>
-          <div class="nav-menu">
-            <ul class="nav-links">
-              <li class="nav-dropdown">
-                <a href="#services">Services ▾</a>
-                <ul class="dropdown-menu">
-                  <li><a href="/restaurant-cleaning-los-angeles">Restaurant Cleaning</a></li>
-                  <li><a href="/commercial-kitchen-cleaning">Kitchen Cleaning</a></li>
-                  <li><a href="/preventive-maintenance">Preventive Maintenance</a></li>
-                  <li><a href="/vendor-management">Vendor Management</a></li>
-                </ul>
-              </li>
-              <li><a href="/platform">Platform</a></li> <li><a href="/blog">Ops Guides</a></li>
-              <li><a href="/case-studies">Case Studies</a></li>
-            </ul>
-            <div class="nav-contact">
-              <a href="tel:3235551234" class="phone-link">Call (323) 555-1234</a>
-              <a href="/platform#scorecard-sample" class="btn btn-primary">See sample outputs</a>
-            </div>
-          </div>
-          <button class="mobile-menu-toggle"><span></span><span></span><span></span></button>
-        </div>
+<header class="header">
+  <nav>
+    <a href="/" class="logo"><span class="logo-text">GroundOps</span></a>
+    <ul class="nav-links">
+      <li><a href="/platform">Platform</a></li>
+      <li><a href="/restaurant-cleaning-los-angeles">Services</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+      <li><a href="/blog">Ops Guides</a></li>
+    </ul>
+    <a href="mailto:info@groundops.com" class="nav-contact">Contact</a>
+    <button class="mobile-menu-toggle" aria-label="Menu"><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+  <article class="blog-post">
+    <div class="container container--narrow">
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> / <a href="/case-studies">Case Studies</a> / <span>Inspection readiness</span>
+      </nav>
+
+      <h1 class="page-title">How a full-service restaurant group standardized inspection readiness across 5 locations</h1>
+
+      <p>The goal was operational: remediate issues, document changes, and prevent repeat exceptions. This case study shows the workflow and artifact formats (redacted), not unverifiable claims.</p>
+
+      <hr class="section-divider">
+
+      <h2>Context</h2>
+      <ul>
+        <li><strong>Locations:</strong> 5</li>
+        <li><strong>Operating hours:</strong> lunch through late night</li>
+        <li><strong>Constraints:</strong> limited downtime windows, multiple managers, frequent vendor handoffs</li>
+      </ul>
+
+      <hr class="section-divider">
+
+      <h2>Problems (max 3)</h2>
+      <ul>
+        <li>Inspection risk was handled reactively (no repeatable corrective-action workflow)</li>
+        <li>No evidence package: checklists/photos were inconsistent or missing</li>
+        <li>Repeat exceptions persisted across locations without ownership and due dates</li>
+      </ul>
+
+      <hr class="section-divider">
+
+      <h2>System deployed</h2>
+      <p>Intake, work orders, QA checklist, photo evidence, exception log, scorecards.</p>
+
+      <h3>Corrective actions</h3>
+      <p>Exceptions are logged with owners and due dates; closure requires evidence.</p>
+
+      <h3>Inspection readiness</h3>
+      <p>Documentation is packaged per visit: checklist + photos + exceptions resolved.</p>
+
+      <h3>Reporting</h3>
+      <p>Monthly scorecards show recurring issues and closure performance by location/vendor.</p>
+
+      <hr class="section-divider">
+
+      <h2>Operational outputs</h2>
+      <p><strong>Tracked metrics</strong> (examples): repeat exceptions by category, closure time distribution, rework frequency, SLA adherence by priority class. Artifacts below show the format.</p>
+
+      <hr class="section-divider">
+
+      <h2>Artifacts (redacted)</h2>
+
+      <h3>Checklist excerpt</h3>
+      <div class="table-wrapper" role="region" aria-label="Checklist excerpt">
+        <table role="table">
+          <thead>
+            <tr><th>Area</th><th>Task</th><th>Status</th><th>Evidence</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>BOH</td><td>Walls/backsplash degrease (scoped)</td><td>Complete</td><td>Photo set attached</td></tr>
+            <tr><td>Hood</td><td>NFPA documentation check</td><td>Exception</td><td>Certificate requested</td></tr>
+            <tr><td>FOH</td><td>Restrooms reset + sanitizer logs</td><td>Complete</td><td>Checklist + photos</td></tr>
+          </tbody>
+        </table>
       </div>
-    </nav>
-  </header>
 
-  <main>
-    <section class="service-page-hero">
-      <div class="container">
-        <div class="breadcrumbs">
-          <a href="/case-studies">Case Studies</a> / <span>Inspection readiness</span>
-        </div>
-        <h1>How a full-service restaurant group standardized inspection readiness across 5 locations</h1>
-        <p class="hero-lead">The goal was operational: remediate issues, document changes, and prevent repeat exceptions. This case study shows the workflow and artifact formats (redacted), not unverifiable claims.</p>
-        <div class="hero-cta-row">
-          <a href="/platform" class="btn btn-primary btn-lg">View the platform</a>
-          <a href="/vendor-management" class="btn btn-outline btn-lg">Vendor management</a>
-        </div>
+      <h3>Photo-evidence placeholder</h3>
+      <p>Placeholder: [Before] [After] [Exception] (images redacted in this template).</p>
+
+      <h3>Exception log excerpt</h3>
+      <div class="table-wrapper" role="region" aria-label="Exception log excerpt">
+        <table role="table">
+          <thead>
+            <tr><th>Location</th><th>Exception</th><th>Owner</th><th>Due</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Location 2</td><td>Missing hood certificate for last service</td><td>Vendor</td><td>--</td><td>Open</td></tr>
+            <tr><td>Location 4</td><td>Repeat drain odor (needs maintenance)</td><td>PM</td><td>--</td><td>Dispatched</td></tr>
+          </tbody>
+        </table>
       </div>
-    </section>
 
-    <section class="service-detail-section">
-      <div class="container">
-        <h2>Context</h2>
-        <ul class="service-checklist">
-          <li><strong>Locations:</strong> 5</li>
-          <li><strong>Operating hours:</strong> lunch through late night</li>
-          <li><strong>Constraints:</strong> limited downtime windows, multiple managers, frequent vendor handoffs</li>
-        </ul>
+      <h3>Scorecard excerpt</h3>
+      <div class="table-wrapper" role="region" aria-label="Scorecard excerpt">
+        <table role="table">
+          <thead>
+            <tr><th>Metric</th><th>Value</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Repeat exceptions</td><td>--</td><td>Top recurring issues by category</td></tr>
+            <tr><td>Median time-to-close</td><td>--</td><td>Closure time distribution by priority</td></tr>
+            <tr><td>Rework frequency</td><td>--</td><td>Re-opened work orders / total</td></tr>
+          </tbody>
+        </table>
       </div>
-    </section>
 
-    <section class="service-detail-section alt-bg">
-      <div class="container">
-        <h2>Problems (max 3)</h2>
-        <ul class="service-checklist">
-          <li>Inspection risk was handled reactively (no repeatable corrective-action workflow)</li>
-          <li>No evidence package: checklists/photos were inconsistent or missing</li>
-          <li>Repeat exceptions persisted across locations without ownership and due dates</li>
-        </ul>
+      <hr class="section-divider">
+
+      <h2>Playbooks used</h2>
+      <div class="related-grid">
+        <a href="/blog/inspection-readiness-corrective-action-workflow" class="related-link">Inspection readiness workflow -- Corrective actions + evidence + closure</a>
+        <a href="/blog/nfpa-96-documentation-workflow" class="related-link">NFPA 96 documentation workflow -- Certificates + evidence + retrievable records</a>
       </div>
-    </section>
 
-    <section class="service-detail-section">
-      <div class="container">
-        <h2>System deployed</h2>
-        <p class="section-intro">Intake → work orders → QA checklist → photo evidence → exception log → scorecards.</p>
-        <div class="features-grid-3">
-          <div class="feature-box">
-            <h3>Corrective actions</h3>
-            <p>Exceptions are logged with owners and due dates; closure requires evidence.</p>
-          </div>
-          <div class="feature-box">
-            <h3>Inspection readiness</h3>
-            <p>Documentation is packaged per visit: checklist + photos + exceptions resolved.</p>
-          </div>
-          <div class="feature-box">
-            <h3>Reporting</h3>
-            <p>Monthly scorecards show recurring issues and closure performance by location/vendor.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <hr class="section-divider">
 
-    <section class="service-detail-section alt-bg">
-      <div class="container">
-        <h2>Operational outputs</h2>
-        <p class="section-intro"><strong>Tracked metrics</strong> (examples): repeat exceptions by category, closure time distribution, rework frequency, SLA adherence by priority class. Artifacts below show the format.</p>
-      </div>
-    </section>
-
-    <section class="service-detail-section">
-      <div class="container">
-        <h2>Artifacts (redacted)</h2>
-
-        <h3>Checklist excerpt</h3>
-        <div class="table-wrapper" role="region" aria-label="Checklist excerpt">
-          <table class="comparison-table" role="table">
-            <thead><tr><th>Area</th><th>Task</th><th>Status</th><th>Evidence</th></tr></thead>
-            <tbody>
-              <tr><td>BOH</td><td>Walls/backsplash degrease (scoped)</td><td>Complete</td><td>Photo set attached</td></tr>
-              <tr><td>Hood</td><td>NFPA documentation check</td><td>Exception</td><td>Certificate requested</td></tr>
-              <tr><td>FOH</td><td>Restrooms reset + sanitizer logs</td><td>Complete</td><td>Checklist + photos</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Photo-evidence placeholder</h3>
-        <p>Placeholder: [Before] [After] [Exception] (images redacted in this template).</p>
-
-        <h3>Exception log excerpt</h3>
-        <div class="table-wrapper" role="region" aria-label="Exception log excerpt">
-          <table class="comparison-table" role="table">
-            <thead><tr><th>Location</th><th>Exception</th><th>Owner</th><th>Due</th><th>Status</th></tr></thead>
-            <tbody>
-              <tr><td>Location 2</td><td>Missing hood certificate for last service</td><td>Vendor</td><td>—</td><td>Open</td></tr>
-              <tr><td>Location 4</td><td>Repeat drain odor (needs maintenance)</td><td>PM</td><td>—</td><td>Dispatched</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Scorecard excerpt</h3>
-        <div class="table-wrapper" role="region" aria-label="Scorecard excerpt">
-          <table class="comparison-table" role="table">
-            <thead><tr><th>Metric</th><th>Value</th><th>Notes</th></tr></thead>
-            <tbody>
-              <tr><td>Repeat exceptions</td><td>—</td><td>Top recurring issues by category</td></tr>
-              <tr><td>Median time-to-close</td><td>—</td><td>Closure time distribution by priority</td></tr>
-              <tr><td>Rework frequency</td><td>—</td><td>Re-opened work orders / total</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta-section">
-      <div class="container">
-        <h2>Get an ops walkthrough</h2>
-        <p>See the corrective-action workflow, evidence requirements, and scorecard formats.</p>
-        <div class="cta-buttons-center">
-          <a href="tel:3235551234" class="btn btn-primary btn-lg">Call (323) 555-1234</a>
-          <a href="/restaurant-cleaning-los-angeles" class="btn btn-outline-white btn-lg">Restaurant cleaning</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-detail-section alt-bg">
-      <div class="container">
-        <h2>Playbooks used</h2>
-        <div class="related-grid">
-          <a href="/blog/inspection-readiness-corrective-action-workflow" class="related-card">
-            <h3>Inspection readiness workflow</h3>
-            <p>Corrective actions + evidence + closure</p>
-            <span class="link-arrow">→</span>
-          </a>
-          <a href="/blog/nfpa-96-documentation-workflow" class="related-card">
-            <h3>NFPA 96 documentation workflow</h3>
-            <p>Certificates + evidence + retrievable records</p>
-            <span class="link-arrow">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="related-services">
-      <div class="container">
-        <h2>Relevant services</h2>
-        <div class="related-grid">
-          <a href="/restaurant-cleaning-los-angeles" class="related-card">
-            <h3>Restaurant cleaning</h3>
-            <p>Baseline execution with QA + reporting</p>
-            <span class="link-arrow">→</span>
-          </a>
-          <a href="/hood-exhaust-cleaning" class="related-card">
-            <h3>Hood / exhaust</h3>
-            <p>Documentation and inspection readiness</p>
-            <span class="link-arrow">→</span>
-          </a>
-          <a href="/vendor-management" class="related-card">
-            <h3>Vendor management</h3>
-            <p>One intake, one queue</p>
-            <span class="link-arrow">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; 2024 GroundOps. All rights reserved.</p>
+      <h2>Relevant services</h2>
+      <div class="related-grid">
+        <a href="/restaurant-cleaning-los-angeles" class="related-link">Restaurant cleaning -- Baseline execution with QA + reporting</a>
+        <a href="/hood-exhaust-cleaning" class="related-link">Hood / exhaust -- Documentation and inspection readiness</a>
+        <a href="/vendor-management" class="related-link">Vendor management -- One intake, one queue</a>
       </div>
     </div>
-  </footer>
+  </article>
+</main>
 
-  <script src="../script.js"></script>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">GroundOps</span>
+        <p>Facilities execution for multi-location restaurants. Licensed, insured, SLA-based.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/commercial-kitchen-cleaning">Kitchen Cleaning</a></li>
+          <li><a href="/hood-exhaust-cleaning">Hood & Exhaust</a></li>
+          <li><a href="/nightly-cleaning">Nightly Programs</a></li>
+          <li><a href="/preventive-maintenance">Preventive Maintenance</a></li>
+          <li><a href="/vendor-management">Vendor Management</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/platform">Platform</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/blog">Ops Guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Los Angeles, CA</li>
+          <li>(323) 555-1234</li>
+          <li><a href="mailto:info@groundops.com">info@groundops.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 GroundOps LLC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
 </body>
 </html>
-

@@ -1,7 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Supplier Portal - GroundOps Contract Management</title> <meta name="robots" content="noindex, nofollow"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> <link rel="stylesheet" href="styles.css"> <link rel="stylesheet" href="portal-styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplier Portal | GroundOps</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portal-styles.css">
+  <meta name="theme-color" content="#0a0a0a">
 </head>
-<body> <!-- Header --> <header class="header"> <nav class="navbar"> <div class="container"> <div class="nav-wrapper"> <div class="logo"> <a href="/">GroundOps</a> </div> <div class="nav-menu"> <ul class="nav-links"> <li><a href="/">Home</a></li> <li><a href="#contracts">Contracts</a></li> <li><a href="#templates">Templates</a></li> <li><a href="#clients">Clients</a></li> </ul> <div class="nav-contact"> <a href="tel:877-253-2646" class="phone-link">877-253-2646</a> <button class="btn btn-primary" onclick="logout()">Logout</button> </div> </div> </div> </div> </nav> </header> <!-- Portal Dashboard --> <section class="portal-hero"> <div class="container"> <h1>Supplier Portal</h1> <p class="hero-subtitle">Manage contracts, templates, and client relationships</p> </div> </section> <!-- Contract Template Section --> <section class="contract-section" id="contracts"> <div class="container"> <div class="section-header"> <h2>Contract Management</h2> <p>Create, send, and track cleaning service contracts</p> </div> <!-- Quick Actions --> <div class="quick-actions"> <button class="btn btn-primary" onclick="openNewContract()"> <span>📄</span> New Contract </button> <button class="btn btn-outline" onclick="openTemplates()"> <span>📋</span> Use Template </button> <button class="btn btn-outline" onclick="viewActiveContracts()"> <span>📊</span> Active Contracts </button> </div> <!-- Contract Creation Form --> <div id="contractForm" class="contract-form-wrapper"> <div class="contract-form"> <h3>Create New Service Contract</h3> <form id="serviceContractForm"> <!-- Client Information --> <div class="form-section"> <h4>Client Information</h4> <div class="form-grid"> <div class="form-group"> <label>Business Name *</label> <input type="text" name="businessName" required> </div> <div class="form-group"> <label>Contact Person *</label> <input type="text" name="contactPerson" required> </div> <div class="form-group"> <label>Email *</label> <input type="email" name="email" required> </div> <div class="form-group"> <label>Phone *</label> <input type="tel" name="phone" required> </div> <div class="form-group full-width"> <label>Service Address *</label> <input type="text" name="serviceAddress" required> </div> </div> </div> <!-- Service Details --> <div class="form-section"> <h4>Service Details</h4> <div class="form-grid"> <div class="form-group"> <label>Service Type *</label> <select name="serviceType" onchange="updateServiceOptions()" required> <option value="">Select Service</option> <option value="nightly">Nightly Cleaning</option> <option value="deep">Deep Cleaning</option> <option value="hood">Hood & Exhaust</option> <option value="floor">Floor Maintenance</option> <option value="grease">Grease Trap</option> <option value="custom">Custom Package</option> </select> </div> <div class="form-group"> <label>Frequency *</label> <select name="frequency" required> <option value="">Select Frequency</option> <option value="daily">Daily</option> <option value="weekly">Weekly</option> <option value="biweekly">Bi-Weekly</option> <option value="monthly">Monthly</option> <option value="quarterly">Quarterly</option> <option value="onetime">One-Time</option> </select> </div> <div class="form-group"> <label>Start Date *</label> <input type="date" name="startDate" required> </div> <div class="form-group"> <label>Contract Term *</label> <select name="contractTerm" required> <option value="">Select Term</option> <option value="month">Month-to-Month</option> <option value="6months">6 Months</option> <option value="1year">1 Year</option> <option value="2years">2 Years</option> </select> </div> </div> <!-- Service Checklist --> <div class="service-checklist"> <h5>Services Included:</h5> <div class="checklist-grid"> <label><input type="checkbox" name="services" value="kitchen"> Kitchen Deep Clean</label> <label><input type="checkbox" name="services" value="floors"> Floor Scrubbing</label> <label><input type="checkbox" name="services" value="equipment"> Equipment Cleaning</label> <label><input type="checkbox" name="services" value="hood"> Hood Cleaning</label> <label><input type="checkbox" name="services" value="grease"> Grease Trap Service</label> <label><input type="checkbox" name="services" value="restrooms"> Restroom Sanitation</label> <label><input type="checkbox" name="services" value="dining"> Dining Area</label> <label><input type="checkbox" name="services" value="windows"> Window Cleaning</label> <label><input type="checkbox" name="services" value="pressure"> Pressure Washing</label> <label><input type="checkbox" name="services" value="waste"> Waste Management</label> <label><input type="checkbox" name="services" value="supplies"> Supplies Provided</label> <label><input type="checkbox" name="services" value="emergency"> Emergency Service</label> </div> </div> </div> <!-- Pricing --> <div class="form-section"> <h4>Pricing & Payment</h4> <div class="form-grid"> <div class="form-group"> <label>Service Rate *</label> <input type="number" name="rate" placeholder="$" required> </div> <div class="form-group"> <label>Billing Cycle *</label> <select name="billing" required> <option value="">Select Billing</option> <option value="weekly">Weekly</option> <option value="biweekly">Bi-Weekly</option> <option value="monthly">Monthly</option> <option value="perservice">Per Service</option> </select> </div> <div class="form-group"> <label>Payment Terms *</label> <select name="paymentTerms" required> <option value="">Select Terms</option> <option value="net15">Net 15</option> <option value="net30">Net 30</option> <option value="due">Due on Receipt</option> <option value="prepaid">Prepaid</option> </select> </div> <div class="form-group"> <label>Special Discount</label> <input type="text" name="discount" placeholder="e.g., 10% first month"> </div> </div> </div> <!-- Additional Terms --> <div class="form-section"> <h4>Additional Terms</h4> <div class="form-group full-width"> <label>Special Instructions</label> <textarea name="instructions" rows="3" placeholder="Any special requirements or notes..."></textarea> </div> <div class="form-group full-width"> <label> <input type="checkbox" name="insurance" checked> Include insurance and liability coverage details </label> </div> <div class="form-group full-width"> <label> <input type="checkbox" name="healthCompliance" checked> Include health code compliance </label> </div> </div> <!-- Action Buttons --> <div class="form-actions"> <button type="button" class="btn btn-outline" onclick="previewContract()"> Preview Contract </button> <button type="button" class="btn btn-primary" onclick="sendContract()"> Send to Client </button> <button type="button" class="btn btn-outline" onclick="saveTemplate()"> Save as Template </button> </div> </form> </div> </div> <!-- Contract Templates --> <div id="templateSection" class="template-section" style="display:none;"> <h3>Contract Templates</h3> <div class="template-grid"> <div class="template-card" onclick="loadTemplate('standard')"> <h4>Standard Restaurant</h4> <p>Complete nightly cleaning package for full-service restaurants</p> <span class="template-tag">Most Popular</span> </div> <div class="template-card" onclick="loadTemplate('quickservice')"> <h4>Quick Service</h4> <p>Fast food and quick service restaurant cleaning</p> <span class="template-tag">Budget-Friendly</span> </div> <div class="template-card" onclick="loadTemplate('bar')"> <h4>Bar & Nightclub</h4> <p>Specialized cleaning for bars and entertainment venues</p> <span class="template-tag">After-Hours</span> </div> <div class="template-card" onclick="loadTemplate('kitchen')"> <h4>Ghost Kitchen</h4> <p>Kitchen-only cleaning for delivery operations</p> <span class="template-tag">Efficient</span> </div> <div class="template-card" onclick="loadTemplate('deepclean')"> <h4>Deep Clean Special</h4> <p>One-time or quarterly deep cleaning service</p> <span class="template-tag">Thorough</span> </div> <div class="template-card" onclick="loadTemplate('emergency')"> <h4>Emergency Service</h4> <p>Failed inspection recovery and emergency cleaning</p> <span class="template-tag">Priority Response</span> </div> </div> </div> <!-- Active Contracts Table --> <div id="activeContracts" class="contracts-table" style="display:none;"> <h3>Active Contracts</h3> <div class="table-controls"> <input type="text" placeholder="Search contracts..." id="contractSearch"> <select id="filterStatus"> <option value="all">All Status</option> <option value="active">Active</option> <option value="pending">Pending</option> <option value="expiring">Expiring Soon</option> </select> </div> <table> <thead> <tr> <th>Client</th> <th>Service Type</th> <th>Frequency</th> <th>Start Date</th> <th>Status</th> <th>Actions</th> </tr> </thead> <tbody id="contractsTableBody"> <!-- Contracts will be loaded here --> </tbody> </table> </div> </div> </section> <!-- Contract Preview Modal --> <div id="contractPreview" class="modal"> <div class="modal-content"> <span class="close" onclick="closePreview()">&times;</span> <div id="contractDocument"> <!-- Contract preview will be generated here --> </div> <div class="modal-actions"> <button class="btn btn-primary" onclick="downloadPDF()">Download PDF</button> <button class="btn btn-outline" onclick="emailContract()">Email to Client</button> </div> </div> </div> <script src="portal-script.js"></script>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <a href="/" class="logo"><span class="logo-text">GroundOps</span></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#contracts">Contracts</a></li>
+        <li><a href="#templates">Templates</a></li>
+      </ul>
+      <button class="btn" onclick="logout()" style="font-size: var(--text-xs); padding: var(--space-2) var(--space-4);">Logout</button>
+      <button class="mobile-menu-toggle" aria-label="Menu"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- Portal Title -->
+  <div class="portal-title">
+    <div class="container">
+      <h1>Supplier Portal</h1>
+      <p>Contract management and templates</p>
+    </div>
+  </div>
+
+  <!-- Contract Section -->
+  <section class="contract-section" id="contracts">
+    <div class="container">
+      <h2>Contract Management</h2>
+
+      <!-- Quick Actions -->
+      <div class="quick-actions">
+        <button class="btn" onclick="openNewContract()">New Contract</button>
+        <button class="btn" onclick="openTemplates()">Use Template</button>
+        <button class="btn" onclick="viewActiveContracts()">Active Contracts</button>
+      </div>
+
+      <!-- Contract Creation Form -->
+      <div id="contractForm" class="contract-form-wrapper">
+        <div class="contract-form">
+          <h3>Create New Service Contract</h3>
+          <form id="serviceContractForm">
+            <div class="form-section">
+              <h4>Client Information</h4>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Business Name *</label>
+                  <input type="text" name="businessName" required>
+                </div>
+                <div class="form-group">
+                  <label>Contact Person *</label>
+                  <input type="text" name="contactPerson" required>
+                </div>
+                <div class="form-group">
+                  <label>Email *</label>
+                  <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label>Phone *</label>
+                  <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group full-width">
+                  <label>Service Address *</label>
+                  <input type="text" name="serviceAddress" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h4>Service Details</h4>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Service Type *</label>
+                  <select name="serviceType" onchange="updateServiceOptions()" required>
+                    <option value="">Select Service</option>
+                    <option value="nightly">Nightly Cleaning</option>
+                    <option value="deep">Deep Cleaning</option>
+                    <option value="hood">Hood & Exhaust</option>
+                    <option value="floor">Floor Maintenance</option>
+                    <option value="grease">Grease Trap</option>
+                    <option value="custom">Custom Package</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Frequency *</label>
+                  <select name="frequency" required>
+                    <option value="">Select Frequency</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="biweekly">Bi-Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="onetime">One-Time</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Start Date *</label>
+                  <input type="date" name="startDate" required>
+                </div>
+                <div class="form-group">
+                  <label>Contract Term *</label>
+                  <select name="contractTerm" required>
+                    <option value="">Select Term</option>
+                    <option value="month">Month-to-Month</option>
+                    <option value="6months">6 Months</option>
+                    <option value="1year">1 Year</option>
+                    <option value="2years">2 Years</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="service-checklist">
+                <h5>Services Included:</h5>
+                <div class="checklist-grid">
+                  <label><input type="checkbox" name="services" value="kitchen"> Kitchen Deep Clean</label>
+                  <label><input type="checkbox" name="services" value="floors"> Floor Scrubbing</label>
+                  <label><input type="checkbox" name="services" value="equipment"> Equipment Cleaning</label>
+                  <label><input type="checkbox" name="services" value="hood"> Hood Cleaning</label>
+                  <label><input type="checkbox" name="services" value="grease"> Grease Trap Service</label>
+                  <label><input type="checkbox" name="services" value="restrooms"> Restroom Sanitation</label>
+                  <label><input type="checkbox" name="services" value="dining"> Dining Area</label>
+                  <label><input type="checkbox" name="services" value="windows"> Window Cleaning</label>
+                  <label><input type="checkbox" name="services" value="pressure"> Pressure Washing</label>
+                  <label><input type="checkbox" name="services" value="waste"> Waste Management</label>
+                  <label><input type="checkbox" name="services" value="supplies"> Supplies Provided</label>
+                  <label><input type="checkbox" name="services" value="emergency"> Emergency Service</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h4>Pricing & Payment</h4>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Service Rate *</label>
+                  <input type="number" name="rate" placeholder="$" required>
+                </div>
+                <div class="form-group">
+                  <label>Billing Cycle *</label>
+                  <select name="billing" required>
+                    <option value="">Select Billing</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="biweekly">Bi-Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="perservice">Per Service</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Payment Terms *</label>
+                  <select name="paymentTerms" required>
+                    <option value="">Select Terms</option>
+                    <option value="net15">Net 15</option>
+                    <option value="net30">Net 30</option>
+                    <option value="due">Due on Receipt</option>
+                    <option value="prepaid">Prepaid</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Special Discount</label>
+                  <input type="text" name="discount" placeholder="e.g., 10% first month">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h4>Additional Terms</h4>
+              <div class="form-group full-width">
+                <label>Special Instructions</label>
+                <textarea name="instructions" rows="3" placeholder="Any special requirements or notes..."></textarea>
+              </div>
+              <div class="form-group full-width">
+                <label><input type="checkbox" name="insurance" checked> Include insurance and liability coverage details</label>
+              </div>
+              <div class="form-group full-width">
+                <label><input type="checkbox" name="healthCompliance" checked> Include health code compliance</label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn" onclick="previewContract()">Preview Contract</button>
+              <button type="button" class="btn--primary btn" onclick="sendContract()">Send to Client</button>
+              <button type="button" class="btn" onclick="saveTemplate()">Save as Template</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contract Templates -->
+      <div id="templateSection" class="template-section" style="display:none;">
+        <h3>Contract Templates</h3>
+        <div class="template-grid">
+          <div class="template-card" onclick="loadTemplate('standard')">
+            <h4>Standard Restaurant</h4>
+            <p>Complete nightly cleaning package for full-service restaurants</p>
+            <span class="template-tag">Most Used</span>
+          </div>
+          <div class="template-card" onclick="loadTemplate('quickservice')">
+            <h4>Quick Service</h4>
+            <p>Fast food and quick service restaurant cleaning</p>
+            <span class="template-tag">Standard</span>
+          </div>
+          <div class="template-card" onclick="loadTemplate('bar')">
+            <h4>Bar & Nightclub</h4>
+            <p>Specialized cleaning for bars and entertainment venues</p>
+            <span class="template-tag">After-Hours</span>
+          </div>
+          <div class="template-card" onclick="loadTemplate('kitchen')">
+            <h4>Ghost Kitchen</h4>
+            <p>Kitchen-only cleaning for delivery operations</p>
+            <span class="template-tag">Kitchen</span>
+          </div>
+          <div class="template-card" onclick="loadTemplate('deepclean')">
+            <h4>Deep Clean</h4>
+            <p>One-time or quarterly deep cleaning service</p>
+            <span class="template-tag">Quarterly</span>
+          </div>
+          <div class="template-card" onclick="loadTemplate('emergency')">
+            <h4>Emergency Service</h4>
+            <p>Failed inspection recovery and emergency cleaning</p>
+            <span class="template-tag">Priority</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Contracts Table -->
+      <div id="activeContracts" class="contracts-table" style="display:none;">
+        <h3>Active Contracts</h3>
+        <div class="table-controls">
+          <input type="text" placeholder="Search contracts..." id="contractSearch">
+          <select id="filterStatus">
+            <option value="all">All Status</option>
+            <option value="active">Active</option>
+            <option value="pending">Pending</option>
+            <option value="expiring">Expiring</option>
+          </select>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Service Type</th>
+              <th>Frequency</th>
+              <th>Start Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="contractsTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contract Preview Modal -->
+  <div id="contractPreview" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePreview()">&times;</span>
+      <div id="contractDocument"></div>
+      <div class="modal-actions">
+        <button class="btn--primary btn" onclick="downloadPDF()">Download PDF</button>
+        <button class="btn" onclick="emailContract()">Email to Client</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="portal-script.js"></script>
 </body>
 </html>

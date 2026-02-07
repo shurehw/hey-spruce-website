@@ -7,35 +7,54 @@
   <meta name="description" content="Common vendor coordination failure modes across multi-location restaurants—and the operational controls that prevent repeats.">
   <meta name="keywords" content="vendor coordination, facilities vendor management, multi-location operations, work orders, scope drift">
   <link rel="canonical" href="https://www.groundops.com/blog/vendor-coordination-failure-modes">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <div class="container">
-        <a href="/blog">← Back to GroundOps Ops Guides</a>
-      </div>
-    </nav>
-  </header>
 
+<header class="header">
+  <nav>
+    <a href="/" class="logo"><span class="logo-text">GroundOps</span></a>
+    <ul class="nav-links">
+      <li><a href="/platform">Platform</a></li>
+      <li><a href="/restaurant-cleaning-los-angeles">Services</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+      <li><a href="/blog">Ops Guides</a></li>
+    </ul>
+    <a href="mailto:info@groundops.com" class="nav-contact">Contact</a>
+    <button class="mobile-menu-toggle" aria-label="Menu"><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
   <article class="blog-post">
-    <div class="container">
-      <h1>Vendor coordination failure modes (and the system to prevent them)</h1>
+    <div class="container container--narrow">
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> / <a href="/blog">Ops Guides</a> / <span>Vendor coordination failure modes</span>
+      </nav>
 
-      <p class="lead">Vendor coordination doesn’t fail because people don’t care. It fails because the system doesn’t enforce ownership, scope, evidence, and closure. If you’re running multiple locations, you need controls that prevent repeat exceptions.</p>
+      <h1 class="page-title">Vendor coordination failure modes (and the system to prevent them)</h1>
+
+      <p>Vendor coordination doesn't fail because people don't care. It fails because the system doesn't enforce ownership, scope, evidence, and closure. If you're running multiple locations, you need controls that prevent repeat exceptions.</p>
+
+      <hr class="section-divider">
 
       <h2>Failure modes ops sees repeatedly</h2>
       <ol>
-        <li><strong>Scope drift</strong>: “we thought you meant X” → inconsistent outcomes.</li>
-        <li><strong>Access breakdown</strong>: keys, alarms, manager handoffs → missed windows.</li>
-        <li><strong>No closure evidence</strong>: “done” without proof.</li>
+        <li><strong>Scope drift</strong>: "we thought you meant X" -- inconsistent outcomes.</li>
+        <li><strong>Access breakdown</strong>: keys, alarms, manager handoffs -- missed windows.</li>
+        <li><strong>No closure evidence</strong>: "done" without proof.</li>
         <li><strong>Repeat exceptions</strong>: the same misses recur with no corrective action owner.</li>
-        <li><strong>Split systems</strong>: cleaning vs PM vs repairs tracked separately → no single source of truth.</li>
+        <li><strong>Split systems</strong>: cleaning vs PM vs repairs tracked separately -- no single source of truth.</li>
       </ol>
 
-      <h2>Example artifact: failure mode → control → required work order fields</h2>
+      <hr class="section-divider">
+
+      <h2>Example artifact: failure mode, control, required work order fields</h2>
       <div class="table-wrapper" role="region" aria-label="Failure mode controls table">
-        <table class="comparison-table" role="table">
+        <table role="table">
           <thead>
             <tr>
               <th>Failure mode</th>
@@ -73,26 +92,55 @@
         </table>
       </div>
 
-      <h2>Where this ties into preventive maintenance</h2>
-      <p>A lot of “vendor issues” are actually PM exceptions that never got logged. The fix is not another vendor—it’s a system that routes exceptions into the same queue, with ownership and closure evidence.</p>
-      <p>This is the model described on <a href="/vendor-management">vendor management</a> and implemented in <a href="/platform">the platform</a>. For a proof pattern, see: <a href="/case-studies/multi-location-fast-casual-ops-standardization">multi-location ops standardization</a>. For preventive controls, start with <a href="/preventive-maintenance">preventive maintenance</a>.</p>
+      <hr class="section-divider">
 
-      <section class="cta-section">
-        <h2>Get an ops walkthrough</h2>
-        <p>See the work order fields, evidence requirements, and how repeat exceptions get prevented across locations.</p>
-        <div class="cta-buttons">
-          <a href="/vendor-management" class="btn btn-primary">Vendor management model</a>
-          <a href="tel:3235551234" class="btn btn-secondary">Call (323) 555-1234</a>
-        </div>
-      </section>
+      <h2>Where this ties into preventive maintenance</h2>
+      <p>A lot of "vendor issues" are actually PM exceptions that never got logged. The fix is not another vendor -- it's a system that routes exceptions into the same queue, with ownership and closure evidence.</p>
+      <p>This is the model described on <a href="/vendor-management">vendor management</a> and implemented in <a href="/platform">the platform</a>. For a proof pattern, see: <a href="/case-studies/multi-location-fast-casual-ops-standardization">multi-location ops standardization</a>. For preventive controls, start with <a href="/preventive-maintenance">preventive maintenance</a>.</p>
     </div>
   </article>
+</main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 GroundOps. All rights reserved.</p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">GroundOps</span>
+        <p>Facilities execution for multi-location restaurants. Licensed, insured, SLA-based.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/commercial-kitchen-cleaning">Kitchen Cleaning</a></li>
+          <li><a href="/hood-exhaust-cleaning">Hood & Exhaust</a></li>
+          <li><a href="/nightly-cleaning">Nightly Programs</a></li>
+          <li><a href="/preventive-maintenance">Preventive Maintenance</a></li>
+          <li><a href="/vendor-management">Vendor Management</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/platform">Platform</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/blog">Ops Guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Los Angeles, CA</li>
+          <li>(323) 555-1234</li>
+          <li><a href="mailto:info@groundops.com">info@groundops.com</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>&copy; 2025 GroundOps LLC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
 </body>
 </html>
-

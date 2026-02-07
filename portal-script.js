@@ -204,7 +204,7 @@ function generateContractHTML(formData) {
     return `
         <div style="font-family: Georgia, serif; line-height: 1.8; color: #333;">
             <div style="text-align: center; margin-bottom: 2rem;">
-                <h1 style="color: #5f6b9b; font-size: 2rem;">GROUNDOPS</h1>
+                <h1 style="color: #0a0a0a; font-size: 2rem;">GROUNDOPS</h1>
                 <h2 style="color: #666; font-size: 1.5rem;">Commercial Cleaning Service Agreement</h2>
             </div>
             
@@ -228,7 +228,7 @@ function generateContractHTML(formData) {
             </div>
             
             <div style="margin-bottom: 2rem;">
-                <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">1. SCOPE OF SERVICES</h3>
+                <h3 style="color: #0a0a0a; border-bottom: 2px solid #0a0a0a; padding-bottom: 0.5rem;">1. SCOPE OF SERVICES</h3>
                 <p>GroundOps agrees to provide the following cleaning services:</p>
                 <ul style="margin: 1rem 0;">${servicesList}</ul>
                 <p><strong>Frequency:</strong> ${frequency.charAt(0).toUpperCase() + frequency.slice(1)}</p>
@@ -236,7 +236,7 @@ function generateContractHTML(formData) {
             </div>
             
             <div style="margin-bottom: 2rem;">
-                <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">2. PAYMENT TERMS</h3>
+                <h3 style="color: #0a0a0a; border-bottom: 2px solid #0a0a0a; padding-bottom: 0.5rem;">2. PAYMENT TERMS</h3>
                 <p><strong>Service Rate:</strong> $${rate} per service</p>
                 <p><strong>Billing Cycle:</strong> ${formData.get('billing')}</p>
                 <p><strong>Payment Terms:</strong> ${formData.get('paymentTerms')}</p>
@@ -244,7 +244,7 @@ function generateContractHTML(formData) {
             </div>
             
             <div style="margin-bottom: 2rem;">
-                <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">3. TERMS & CONDITIONS</h3>
+                <h3 style="color: #0a0a0a; border-bottom: 2px solid #0a0a0a; padding-bottom: 0.5rem;">3. TERMS & CONDITIONS</h3>
                 <ul style="margin: 1rem 0;">
                     <li>Service will be performed by trained and insured cleaning professionals</li>
                     <li>All cleaning supplies and equipment provided by GroundOps</li>
@@ -257,14 +257,14 @@ function generateContractHTML(formData) {
             
             ${formData.get('insurance') ? `
             <div style="margin-bottom: 2rem;">
-                <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">4. INSURANCE & LIABILITY</h3>
+                <h3 style="color: #0a0a0a; border-bottom: 2px solid #0a0a0a; padding-bottom: 0.5rem;">4. INSURANCE & LIABILITY</h3>
                 <p>GroundOps maintains comprehensive general liability insurance of $2,000,000 and workers' compensation coverage for all employees. Certificates of insurance available upon request.</p>
             </div>
             ` : ''}
             
             ${formData.get('healthCompliance') ? `
             <div style="margin-bottom: 2rem;">
-                <h3 style="color: #5f6b9b; border-bottom: 2px solid #5f6b9b; padding-bottom: 0.5rem;">5. HEALTH CODE COMPLIANCE GUARANTEE</h3>
+                <h3 style="color: #0a0a0a; border-bottom: 2px solid #0a0a0a; padding-bottom: 0.5rem;">5. HEALTH CODE COMPLIANCE GUARANTEE</h3>
                 <p>GroundOps guarantees all services meet or exceed Los Angeles County Health Department standards. We provide documentation and support for all health inspections.</p>
             </div>
             ` : ''}
@@ -386,36 +386,24 @@ function showNotification(message) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: linear-gradient(135deg, #5f6b9b, #667eea);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        background: #0a0a0a;
+        color: #ffffff;
+        padding: 0.75rem 1.25rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 0.8125rem;
         z-index: 10000;
-        animation: slideIn 0.3s ease;
+        opacity: 0;
+        transition: opacity 150ms ease;
     `;
     notification.textContent = message;
     document.body.appendChild(notification);
-    
+    requestAnimationFrame(() => { notification.style.opacity = '1'; });
+
     setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease';
-        setTimeout(() => notification.remove(), 300);
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 150);
     }, 3000);
 }
-
-// Add animation styles
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-    @keyframes slideOut {
-        from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(100%); opacity: 0; }
-    }
-`;
-document.head.appendChild(style);
 
 // Logout function
 function logout() {
@@ -459,5 +447,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Initialize
-console.log('GroundOps Supplier Portal loaded successfully!');
