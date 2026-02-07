@@ -1,0 +1,15 @@
+# Development utility scripts
+*.py
+*.ps1
+
+# Documentation (not part of deployed site)
+*.md
+!README.md
+
+# Legacy files
+styles-legacy.css
+
+# Development files
+.claude/
+.gitignore
+.vercelignore

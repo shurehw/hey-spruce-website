@@ -88,7 +88,7 @@
 .form-group textarea {
   padding: 0.625rem 0.75rem;
   border: 1px solid var(--border-color, #d4d4d4);
-  font-family: var(--font-family, 'IBM Plex Sans', sans-serif);
+  font-family: var(--font-family, 'Inter', sans-serif);
   font-size: var(--text-sm, 0.8125rem);
   background: var(--color-white, #ffffff);
   color: var(--color-black, #0a0a0a);
@@ -221,7 +221,7 @@
 .table-controls select {
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--border-color, #d4d4d4);
-  font-family: var(--font-family, 'IBM Plex Sans', sans-serif);
+  font-family: var(--font-family, 'Inter', sans-serif);
   font-size: var(--text-sm, 0.8125rem);
 }
 

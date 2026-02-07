@@ -389,7 +389,7 @@ function showNotification(message) {
         background: #0a0a0a;
         color: #ffffff;
         padding: 0.75rem 1.25rem;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 0.8125rem;
         z-index: 10000;
         opacity: 0;

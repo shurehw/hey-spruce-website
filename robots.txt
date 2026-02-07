@@ -7,9 +7,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /tmp/
-Disallow: /supplier-portal.html
-Disallow: /performance-optimized.html
-Disallow: /seo-fixes.html
+Disallow: /supplier-portal
 Crawl-delay: 0
 
 # Specific crawler rules
