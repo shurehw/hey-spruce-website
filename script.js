@@ -31,7 +31,9 @@ document.querySelectorAll('.faq-question').forEach(question => {
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#request-access') return; // handled by openRequestForm
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offset = target.offsetTop - 60;
@@ -39,4 +41,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       if (navLinks) navLinks.classList.remove('active');
     }
   });
+});
+
+// Request Access Modal
+function openRequestForm(e) {
+  if (e) e.preventDefault();
+  const modal = document.getElementById('requestModal');
+  if (modal) modal.style.display = 'block';
+}
+
+function closeRequestForm() {
+  const modal = document.getElementById('requestModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function submitRequestForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const status = document.getElementById('formStatus');
+
+  // Build mailto fallback with form data
+  const subject = encodeURIComponent(`Access Request: ${data.get('company')}`);
+  const body = encodeURIComponent(
+    `Name: ${data.get('name')}\n` +
+    `Company: ${data.get('company')}\n` +
+    `Email: ${data.get('email')}\n` +
+    `Phone: ${data.get('phone') || 'N/A'}\n` +
+    `Locations: ${data.get('locations') || 'N/A'}\n` +
+    `Message: ${data.get('message') || 'N/A'}`
+  );
+
+  window.location.href = `mailto:info@groundops.com?subject=${subject}&body=${body}`;
+
+  if (status) status.textContent = 'Opening email client...';
+  setTimeout(() => {
+    form.reset();
+    closeRequestForm();
+    if (status) status.textContent = '';
+  }, 2000);
+}
+
+// Close modal on outside click
+window.addEventListener('click', function(e) {
+  const modal = document.getElementById('requestModal');
+  if (e.target === modal) closeRequestForm();
 });
